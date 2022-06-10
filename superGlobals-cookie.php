@@ -15,6 +15,14 @@ session_start();
     setcookie("user", "John Doe", time() - 86400);
     $_SESSION['user'] = "23";
     echo $_SESSION['user'];
+
+    echo "<br>";
+
+    if (!isset($_SESSION['user'])) {
+        echo "Session is not set";
+    } else {
+        echo "Session is set";
+    }
     ?>
 </body>
 
