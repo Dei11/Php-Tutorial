@@ -9,12 +9,11 @@
 <body>
     <?php
     $text = "Hello World";
-    function test($text)
+    function test()
     {
-        echo $text;
+        echo $GLOBALS['text'];
     }
-    test($text);
-
+    test();
     ?>
 </body>
 
