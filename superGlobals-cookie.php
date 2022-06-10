@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -10,6 +14,7 @@
     <?php
     setcookie("user", "John Doe", time() - 86400);
     $_SESSION['user'] = "23";
+    echo $_SESSION['user'];
     ?>
 </body>
 
