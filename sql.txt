@@ -6,3 +6,15 @@ create table posts(
 );
 
 INSERT INTO posts (subject, content, date) VALUES ('This is the subject', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tortor elit, auctor in ipsum vel, ultricies auctor sapien. Pellentesque pulvinar scelerisque suscipit. Vivamus pellentesque sodales felis eu molestie. Phasellus rhoncus vitae sem vitae dictum.', '2015-11-14 16:35:01');
+
+
+create table users(
+    user_id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    user_first varchar(256) not null,
+    user_last varchar(256) not null,
+    user_email varchar(256) not null,
+    user_uid varchar(256) not null,
+    user_pwd varchar(256) not null
+);
+
+INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES ('Jake', 'Doe', 'jakei123@gmail.com', 'jakie221', 'test123');
