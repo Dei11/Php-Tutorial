@@ -1,9 +1,3 @@
-<?php
-
-include_once 'db.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -13,17 +7,19 @@ include_once 'db.php';
 </head>
 
 <body>
-    <?php
-    $sql = "SELECT * FROM users;";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo $row['user_first'];
-            echo "<br>";
-        }
-    }
-    ?>
+    <form action="includes/singup.php" method="POST">
+        <input type="text" name="firstName" placeholder="First Name">
+        <br />
+        <input type="text" name="secondName" placeholder="Second Name">
+        <br />
+        <input type="text" name="email" placeholder="E-mail">
+        <br />
+        <input type="text" name="uid" placeholder="Username">
+        <br />
+        <input type="password" name="password" placeholder="Password">
+        <br />
+        <button type="submit" name="submit">Sing Up</button>
+    </form>
 </body>
 
 </html>
